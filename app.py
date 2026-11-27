@@ -22,3 +22,5 @@ if st.button('predict'):
 
     response = requests.get('http://localhost:8000/predict', params=params)
     st.write('Fare:', response.json()['fare'])
+
+
