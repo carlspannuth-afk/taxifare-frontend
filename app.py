@@ -2,6 +2,9 @@ import streamlit as st
 import requests
 
 
+api_url = st.secrets["API_URL"]
+
+
 pickup_datetime = st.text_input('pickup_datetime:')
 pickup_longitude = st.number_input('pickup_longitude')
 pickup_latitude = st.number_input('pickup_latitude')
@@ -20,5 +23,5 @@ if st.button('predict'):
             }
 
 
-    response = requests.get('https://taxifare-api-362770610236.europe-west1.run.app/predict', params=params)
+    response = requests.get(api_url, params=params)
     st.write('Fare:', response.json()['fare'])
