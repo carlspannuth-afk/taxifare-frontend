@@ -20,7 +20,5 @@ if st.button('predict'):
             }
 
 
-    response = requests.get('http://localhost:8000/predict', params=params)
+    response = requests.get('https://taxifare-api-362770610236.europe-west1.run.app/predict', params=params)
     st.write('Fare:', response.json()['fare'])
-
-
