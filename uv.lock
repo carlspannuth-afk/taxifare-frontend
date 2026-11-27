@@ -888,11 +888,15 @@ name = "taxifare-frontend"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "pandas" },
     { name = "streamlit" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "streamlit", specifier = ">=1.67.0" }]
+requires-dist = [
+    { name = "pandas", specifier = ">=3.1.1" },
+    { name = "streamlit", specifier = ">=1.67.0" },
+]
 
 [[package]]
 name = "typing-extensions"
